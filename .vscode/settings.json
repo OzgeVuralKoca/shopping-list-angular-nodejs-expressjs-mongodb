@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/13bdf704-d295-4118-80f4-27bc72211327/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ShoppingListWithAngularNodejsMongoDb",
+    "appService.deploySubpath": "."
+}
