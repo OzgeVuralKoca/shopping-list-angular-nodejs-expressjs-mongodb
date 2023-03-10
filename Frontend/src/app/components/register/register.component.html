@@ -1,0 +1,30 @@
+<nav class="navbar px-5" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand">Shopping List</a>
+    </div>
+</nav>
+
+<div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="col-md-4">
+        <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+            
+            <div class="form-floating mb-3">
+                <input type="text" ngModel required minlength="3" name="name" class="form-control bg-info-subtle" id="name"
+                    placeholder="name">
+                <label for="name">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" ngModel required minlength="3" name="userName" class="form-control bg-info-subtle" id="userName"
+                    placeholder="username">
+                <label for="userName">UserName</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" ngModel required name="password" class="form-control bg-info-subtle" id="password"
+                    placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+            <button [disabled]="!registerForm.valid" class="w-100 btn btn-info mb-3" type="submit">Register</button>
+            <a class="text-dark" routerLink="/register">Login</a>
+        </form>
+    </div>
+</div>

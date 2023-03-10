@@ -1,0 +1,24 @@
+<nav class="navbar px-5" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand">Shopping List</a>
+    </div>
+</nav>
+
+<div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="col-md-4">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <h3 class="h6 pb-2 mb-3 border-3 border-bottom">Please sign in</h3>
+            <div class="form-floating mb-3">
+                <input type="text" ngModel required minlength="3" name="userName" class="form-control bg-info-subtle" id="userName" placeholder="username">
+                <label for="userName">UserName</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" ngModel required name="password" class="form-control bg-info-subtle" id="password"
+                    placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+            <button [disabled]="!loginForm.valid" class="w-100 btn btn-info mb-3" type="submit">Login</button>
+            <a class="text-dark" routerLink="/register">Register</a>
+        </form>
+    </div>
+</div>
